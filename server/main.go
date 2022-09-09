@@ -48,7 +48,7 @@ func main() {
 		payload := w.Payload
 
 		// Generate an access token with the SDK using the signed payload
-		domain := "thirdweb.com"
+		domain := "example.com"
 		token, err := sdk.Auth.GenerateAuthToken(domain, payload, nil)
 		if err != nil {
 			return err
@@ -89,7 +89,7 @@ func main() {
 		}
 
 		// Authenticate token with the SDK
-		domain := "thirdweb.com"
+		domain := "example.com"
 		address, err := sdk.Auth.Authenticate(domain, token)
 		if err != nil {
 			return c.SendStatus(401)
